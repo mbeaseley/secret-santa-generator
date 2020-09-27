@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "lint:ts": "ng lint",
     "lint:ts:fix": "ng lint --fix=true",
     "lint:scss": "stylelint \"src/*.scss\" --syntax scss; exit 0;",
