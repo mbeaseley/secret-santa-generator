@@ -88,7 +88,7 @@
     "no-increment-decrement": false,
     "no-implicit-dependencies": [true, "dev"],
     "ordered-imports": false,
-    "component-selector": [true, "element", ["ng", "ngx"], "kebab-case"],
+    "component-selector": [true, "element", ["cc"], "kebab-case"],
     "use-component-view-encapsulation": false,
     "prefer-inline-decorator": false,
     "newline-before-return": false
