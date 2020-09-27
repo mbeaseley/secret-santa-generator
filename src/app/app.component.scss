@@ -1,0 +1,45 @@
+@import 'variables.scss';
+
+// transition effect needed between splash screen and route
+@mixin transition {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.app {
+  position: relative;
+
+  &__route,
+  & > cc-splash-screen {
+    position: absolute;
+    z-index: 2;
+  }
+
+  cc-splash-screen {
+    opacity: 1;
+
+    &.hide {
+      @include transition;
+    }
+  }
+
+  &__route {
+    &.show {
+      @include transition;
+
+      transition-delay: 0.5s;
+      opacity: 1;
+    }
+  }
+
+  & > cc-snow {
+    z-index: 1;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+}

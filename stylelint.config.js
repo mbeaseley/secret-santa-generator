@@ -2,6 +2,12 @@ module.exports = {
   extends: 'stylelint-config-recommended',
   rules: {
     'at-rule-no-unknown': null,
+    'selector-type-no-unknown': [
+      true,
+      {
+        ignore: ['custom-elements', 'default-namespace'],
+      },
+    ],
     'at-rule-empty-line-before': [
       'always',
       {
