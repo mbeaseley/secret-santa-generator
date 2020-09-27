@@ -94,6 +94,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "secret-santa-generator"
+    }
+  },
+  "defaultProject": "secret-santa-generator",
+  "cli": {
+    "analytics": "e90d1416-4213-4875-8ffe-0a0b57078636"
+  }
 }
