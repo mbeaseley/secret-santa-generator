@@ -91,6 +91,7 @@
     "component-selector": [true, "element", ["cc"], "kebab-case"],
     "use-component-view-encapsulation": false,
     "prefer-inline-decorator": false,
-    "newline-before-return": false
+    "newline-before-return": false,
+    "array-type": [true, "array"]
   }
 }
