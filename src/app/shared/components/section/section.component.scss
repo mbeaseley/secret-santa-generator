@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+.section {
+  width: 700px;
+  background: $dark-blue3;
+  border: 5px solid $white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 24px 32px;
+
+  &__size {
+    &-large {
+      height: 70vh;
+      min-height: 680px;
+    }
+
+    &-medium {
+      height: 50vh;
+      min-height: 484px;
+    }
+
+    &-small {
+      height: 30vh;
+      min-height: 290px;
+    }
+  }
+
+  &__title {
+    font-family: $font-heading;
+    text-align: center;
+    margin: 12px auto;
+  }
+}
