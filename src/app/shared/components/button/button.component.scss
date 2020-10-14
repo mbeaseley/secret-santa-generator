@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+.cc-button {
+  position: relative;
+
+  a,
+  button {
+    text-decoration: none;
+    margin: 0 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    font-weight: $font-normal;
+  }
+
+  &--style {
+    &-primary {
+      background-color: $red;
+      border-color: $white;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $red;
+        border-color: $red;
+      }
+    }
+
+    &-secondary {
+      background-color: transparent;
+      border-color: $red;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $red;
+      }
+    }
+  }
+
+  &--size {
+    &-small {
+      padding: 12px 24px;
+    }
+
+    &-medium {
+      padding: 12px 32px;
+    }
+
+    &-large {
+      padding: 12px 48px;
+    }
+  }
+}
