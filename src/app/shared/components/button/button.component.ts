@@ -56,7 +56,7 @@ export class ButtonComponent implements OnInit, OnChanges {
       cc-button--style-${this.buttonStyle}
       `,
     };
-    console.log(buttonEl);
+
     return buttonEl;
   }
 

@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-top: 2px solid $white;
+  background-color: $dark-blue1;
+
+  &__socials > * {
+    width: 16px;
+    margin: 0 8px;
+  }
+
+  &__copyright {
+    font-size: $font-size--small;
+  }
+}

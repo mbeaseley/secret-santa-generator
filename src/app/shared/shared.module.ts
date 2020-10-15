@@ -6,6 +6,7 @@ import { SnowBackgroundComponent } from './components/snow-background/snow-backg
 import { SectionComponent } from './components/section/section.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SantaComponent } from './components/santa/santa.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SantaComponent } from './components/santa/santa.component';
     SectionComponent,
     ButtonComponent,
     SantaComponent,
+    FooterComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -22,6 +24,7 @@ import { SantaComponent } from './components/santa/santa.component';
     SectionComponent,
     ButtonComponent,
     SantaComponent,
+    FooterComponent,
   ],
 })
 export class SharedModule {}

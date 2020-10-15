@@ -9,9 +9,9 @@
 
   cc-santa {
     position: absolute;
+    display: flex;
     z-index: -1;
     top: 17vh;
-    left: 19vw;
   }
 
   &__cta {
