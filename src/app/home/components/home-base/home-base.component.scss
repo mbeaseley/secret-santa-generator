@@ -7,6 +7,13 @@
   height: 100vh;
   width: 100vw;
 
+  cc-santa {
+    position: absolute;
+    z-index: -1;
+    top: 17vh;
+    left: 19vw;
+  }
+
   &__cta {
     display: flex;
     justify-content: center;

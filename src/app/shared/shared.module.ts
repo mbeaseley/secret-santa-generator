@@ -5,10 +5,23 @@ import { SplashScreenComponent } from './components/splash-screen/splash-screen.
 import { SnowBackgroundComponent } from './components/snow-background/snow-background.component';
 import { SectionComponent } from './components/section/section.component';
 import { ButtonComponent } from './components/button/button.component';
+import { SantaComponent } from './components/santa/santa.component';
 
 @NgModule({
-  declarations: [SplashScreenComponent, SnowBackgroundComponent, SectionComponent, ButtonComponent],
+  declarations: [
+    SplashScreenComponent,
+    SnowBackgroundComponent,
+    SectionComponent,
+    ButtonComponent,
+    SantaComponent,
+  ],
   imports: [CommonModule],
-  exports: [SplashScreenComponent, SnowBackgroundComponent, SectionComponent, ButtonComponent],
+  exports: [
+    SplashScreenComponent,
+    SnowBackgroundComponent,
+    SectionComponent,
+    ButtonComponent,
+    SantaComponent,
+  ],
 })
 export class SharedModule {}
