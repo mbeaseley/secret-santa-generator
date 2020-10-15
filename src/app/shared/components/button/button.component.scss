@@ -36,9 +36,19 @@
         color: $red;
       }
     }
+
+    &-icon-link {
+      display: flex;
+      align-items: center;
+      border-color: transparent;
+    }
   }
 
   &--size {
+    &-extra-small {
+      padding: 0 8px;
+    }
+
     &-small {
       padding: 12px 24px;
     }

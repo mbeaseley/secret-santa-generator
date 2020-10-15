@@ -22,6 +22,7 @@ export class ButtonComponent implements OnInit, OnChanges {
 
   @Input() uiRef: string;
   @Input() uiParams: any;
+  @Input() externalLink: string;
   @Input() buttonType: CCButtonType = CCButtonType.Button;
   @Input() buttonSize: CCButtonSize = CCButtonSize.Medium;
   @Input() buttonStyle: CCButtonStyle = CCButtonStyle.Primary;
@@ -45,6 +46,7 @@ export class ButtonComponent implements OnInit, OnChanges {
   createButton(): CCButton {
     const buttonEl: CCButton = {
       uiRef: this.uiRef,
+      href: this.externalLink,
       clicked: this.clicked,
       size: this.buttonSize,
       style: this.buttonStyle,

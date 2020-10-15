@@ -13,8 +13,19 @@
   )
     ng-container(*ngTemplateOutlet="content")
 
+  a(
+    *ngIf="button?.href"
+    tabindex="0"
+    role="button"
+    attr.href="{{button.href}}"
+    attr.aria-label="{{button.description || null}}"
+    attr.title="{{button.description || null}}"
+    ngClass="{{button.displayClasses}}"
+  )
+    ng-container(*ngTemplateOutlet="content")
+
   button(
-    *ngIf="!button?.uiRef"
+    *ngIf="!button?.uiRef && !button?.href"
     type="{{button.type}}"
     ngClass="{{button.displayClasses}}"
     attr.aria-label="{{button.description || null}}"

@@ -7,13 +7,19 @@
   right: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 24px;
   border-top: 2px solid $white;
   background-color: $dark-blue1;
+  z-index: 2;
 
-  &__socials > * {
-    width: 16px;
-    margin: 0 8px;
+  &__socials {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 16px;
+    }
   }
 
   &__copyright {

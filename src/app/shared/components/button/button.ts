@@ -7,6 +7,7 @@ export enum CCButtonType {
 }
 
 export enum CCButtonSize {
+  ExtraSmall = 'extra-small',
   Small = 'small',
   Medium = 'medium',
   Large = 'large',
@@ -15,6 +16,7 @@ export enum CCButtonSize {
 export enum CCButtonStyle {
   Primary = 'primary',
   Secondary = 'secondary',
+  IconLink = 'icon-link',
 }
 
 export enum CCButtonState {
@@ -24,7 +26,7 @@ export enum CCButtonState {
 
 export interface CCButton {
   type: CCButtonType;
-  // href: string;
+  href: string;
   uiRef: string;
   style: CCButtonStyle;
   size: CCButtonSize;
