@@ -1,25 +1,29 @@
 @import 'variables.scss';
 
-.splash-screen {
+@mixin desktop-style {
   position: absolute;
   display: flex;
   width: 100vw;
   height: 100vh;
-  // opacity: 1;
-
-  // &.splash-screen--hide {
-  //   -webkit-transition: opacity 1s ease-in-out;
-  //   -moz-transition: opacity 1s ease-in-out;
-  //   -ms-transition: opacity 1s ease-in-out;
-  //   -o-transition: opacity 1s ease-in-out;
-  //   transition: opacity s ease-in-out;
-  //   opacity: 0;
-  // }
 
   &__logo {
     display: flex;
     align-self: center;
     margin: 0 auto;
     height: 300px;
+  }
+}
+
+@mixin mobile-style {
+  &__logo {
+    height: 150px;
+  }
+}
+
+.splash-screen {
+  @include desktop-style;
+
+  @include to(medium) {
+    @include mobile-style;
   }
 }

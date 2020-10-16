@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-.footer {
+@mixin desktop-style {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -23,6 +23,22 @@
   }
 
   &__copyright {
-    font-size: $font-size--small;
+    @include fontSize($font-size--small);
+  }
+}
+
+@mixin mobile-style {
+  flex-flow: column;
+
+  &__copyright {
+    margin-top: 8px;
+  }
+}
+
+.footer {
+  @include desktop-style;
+
+  @include to(medium) {
+    @include mobile-style;
   }
 }

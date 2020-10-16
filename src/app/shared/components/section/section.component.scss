@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-.section {
+@mixin desktop-style {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -32,5 +32,39 @@
     font-family: $font-heading;
     text-align: center;
     margin: 12px auto;
+  }
+}
+
+@mixin mobile-style {
+  justify-content: normal;
+  width: auto;
+  padding: 24px;
+
+  &__size {
+    &-large,
+    &-medium,
+    &-small {
+      height: auto;
+      min-height: auto;
+      max-height: 80vh;
+    }
+  }
+
+  &__title {
+    @include fontSize($font-size--x-large);
+    margin: 8px auto;
+  }
+
+  &__description {
+    @include fontSize($font-size--medium);
+    margin: 8px auto;
+  }
+}
+
+.section {
+  @include desktop-style;
+
+  @include to(medium) {
+    @include mobile-style;
   }
 }

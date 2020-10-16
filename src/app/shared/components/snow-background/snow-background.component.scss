@@ -10,7 +10,7 @@
 // Variables
 $total: 200;
 
-.snow-background {
+@mixin desktop-style {
   background: radial-gradient(ellipse at bottom, $dark-blue1 0%, $dark-blue2 100%);
   height: 100vh;
   width: 100vw;
@@ -51,4 +51,8 @@ $total: 200;
       }
     }
   }
+}
+
+.snow-background {
+  @include desktop-style;
 }

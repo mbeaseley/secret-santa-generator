@@ -9,8 +9,9 @@
   transition: opacity 1s ease-in-out;
 }
 
-.app {
+@mixin desktop-style {
   position: relative;
+  overflow: hidden;
 
   &__route,
   & > cc-splash-screen {
@@ -41,5 +42,18 @@
 
   .hide {
     opacity: 0;
+  }
+}
+
+@mixin mobile-style {
+  height: 100vh;
+  width: 100vw;
+}
+
+.app {
+  @include desktop-style;
+
+  @include to(medium) {
+    @include mobile-style;
   }
 }

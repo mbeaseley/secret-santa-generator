@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-.home-base {
+@mixin desktop-style {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   width: 100vw;
 
   cc-santa {
-    position: absolute;
+    position: fixed;
     display: flex;
     z-index: -1;
     top: 17vh;
@@ -24,5 +24,57 @@
     font-style: italic;
     color: $grey;
     margin: auto 4px;
+  }
+}
+
+@mixin mobile-style {
+  align-items: normal;
+
+  cc-santa {
+    top: 69vh;
+    left: 64vw;
+    z-index: 2;
+  }
+
+  &__cta {
+    flex-flow: column;
+    margin: 16px auto;
+  }
+
+  &__choice {
+    margin: 8px auto;
+  }
+}
+
+.home-base {
+  @include desktop-style();
+
+  @include to(extraLarge) {
+    cc-santa {
+      top: 23vh;
+    }
+  }
+
+  @include to(large) {
+    cc-santa {
+      top: 21vh;
+    }
+  }
+
+  @include to(medium) {
+    @include mobile-style();
+  }
+
+  @include to(small) {
+    cc-santa {
+      top: 72vh;
+      left: 50vw;
+    }
+  }
+
+  @include to(extraSmall) {
+    cc-santa {
+      top: 64vh;
+    }
   }
 }

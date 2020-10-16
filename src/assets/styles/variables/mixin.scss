@@ -2,3 +2,36 @@
 @mixin fontSize($sizeInPixels) {
   font-size: ($sizeInPixels / $font-size) + rem;
 }
+
+// Breakpoints
+@mixin to($size) {
+  @if $size== 'extraSmall' {
+    @media only screen and (max-width: $extra-extra-small-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $size== 'small' {
+    @media only screen and (max-width: $extra-small-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $size== 'medium' {
+    @media only screen and (max-width: $small-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $size== 'large' {
+    @media only screen and (max-width: $medium-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $size== 'extraLarge' {
+    @media only screen and (max-width: $large-breakpoint) {
+      @content;
+    }
+  }
+}

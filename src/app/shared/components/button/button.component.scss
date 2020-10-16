@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
-.cc-button {
-  position: relative;
+@mixin desktop-style {
+  display: inline-flex;
 
   a,
   button {
@@ -60,5 +60,38 @@
     &-large {
       padding: 12px 48px;
     }
+  }
+}
+
+@mixin mobile-style {
+  display: flex;
+
+  a,
+  button {
+    width: 100%;
+  }
+
+  &--style {
+    &-primary,
+    &-secondary {
+      @include fontSize($font-size--medium);
+    }
+  }
+
+  &--size {
+    &-extra-small,
+    &-small,
+    &-medium,
+    &-large {
+      padding: 8px auto;
+    }
+  }
+}
+
+.cc-button {
+  @include desktop-style;
+
+  @include to(medium) {
+    @include mobile-style;
   }
 }
