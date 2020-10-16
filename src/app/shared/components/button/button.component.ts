@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
+  HostListener,
   Input,
   OnChanges,
   OnInit,
@@ -36,8 +37,14 @@ export class ButtonComponent implements OnInit, OnChanges {
   /**
    * on Route change event
    */
+  @HostListener('click', [])
   onRouteEvent(): Promise<boolean> {
-    return this.route.navigate([this.button.uiRef], this.uiParams);
+    if (!this.button?.uiRef) {
+      return Promise.resolve(undefined);
+    }
+
+    const params = this.uiParams ? JSON.parse(this.uiParams) : {};
+    return this.route.navigate([this.button.uiRef], params);
   }
 
   /**

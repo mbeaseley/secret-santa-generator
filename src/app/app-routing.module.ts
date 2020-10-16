@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import(`./home/home.module`).then((m) => m.HomeModule),
   },
   {
-    path: 'create',
+    path: 'create-event',
     loadChildren: () => import(`./create/create.module`).then((m) => m.CreateModule),
   },
   {

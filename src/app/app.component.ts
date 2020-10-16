@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cc-app',
